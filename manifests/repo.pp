@@ -12,7 +12,11 @@
 #
 # [*repositories*]
 #   Which repos to include.
-#   Defaults to "wheezy main" 
+#   Defaults to "main" 
+#
+# [*release*]
+#   Which release to install.
+#   Defaults to "wheezy" 
 #
 # [*key_source*]
 #   Link to the location of the key
@@ -41,13 +45,15 @@
 #
 class hpacucli::repo (
   $repository_url  = "http://hwraid.le-vert.net/debian",
-  $repositories    = "wheezy main",
+  $repositories    = "main",
+  $release         = "wheezy",
   $key_source      = "http://hwraid.le-vert.net/debian/hwraid.le-vert.net.gpg.key",
   $key_fingerprint = "0073C11919A641464163F7116005210E23B3D3B4",
 ) {
   apt::source { "hpacucli" :
     location      => $repository_url,
     repos         => $repositories,
+    release       => $release, 
     key           => $key_fingerprint,
     key_source    => $key_source,
     key_server    => undef,
