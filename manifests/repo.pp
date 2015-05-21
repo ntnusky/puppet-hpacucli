@@ -46,6 +46,7 @@ class hpacucli::repo (
   $key_fingerprint = "0073C11919A641464163F7116005210E23B3D3B4",
 ) {
   apt::source { "hpacucli" :
+    location      => $repository_url,
     repos         => $repositories,
     key           => $key_fingerprint,
     key_source    => $key_source,
