@@ -46,4 +46,5 @@ Developed and tested on Ubuntu 14.04 server. Pull requests are welcomed.
 
 ## Release Notes/Contributors/Etc **Optional**
 
+ * 0.2.0 - Module is bugfixed, and tested on Ubuntu 14.04.
  * 0.1.0 - Initial commit. Nothing really works yet.
