@@ -19,4 +19,7 @@ class hpacucli::install {
   package { 'hpacucli':
     ensure => 'present',
   }
+  package { 'hp-health':
+    ensure => 'present',
+  }
 }
