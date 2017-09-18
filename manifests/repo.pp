@@ -29,7 +29,7 @@
 # === Examples
 #
 #  class { 'hpacucli::repo':
-#    repository_url  => "http://downloads.linux.hpe.com/SDR/project/mcp"
+#    repository_url  => "http://downloads.linux.hpe.com/SDR/repo/mcp"
 #    repositories    => "${::lsbdistcodename}/current"
 #    key_source      => "http://downloads.linux.hpe.com/SDR/hpePublicKey2048_key1.pub"
 #    key_fingerprint => "57446EFDE098E5C934B69C7DC208ADDE26C2B797"
@@ -44,7 +44,7 @@
 # Copyright 2015 Eigil Obrestad, unless otherwise noted.
 #
 class hpacucli::repo (
-  $repository_url  = 'http://downloads.linux.hpe.com/SDR/project/mcp',
+  $repository_url  = 'http://downloads.linux.hpe.com/SDR/repo/mcp',
   $repositories    = 'non-free',
   $release         = "${::lsbdistcodename}/current",
   $key_source      = 'http://downloads.linux.hpe.com/SDR/hpePublicKey2048_key1.pub',
