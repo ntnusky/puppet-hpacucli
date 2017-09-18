@@ -16,10 +16,9 @@
 #
 
 class hpacucli::install {
-  package { 'hpacucli':
-    ensure => 'present',
-  }
-  package { 'hp-health':
-    ensure => 'present',
+  $pkgs = [ 'hpacucli', 'hp-health']
+  package { $pkgs:
+    ensure  => 'present',
+    require => Class['apt::update']
   }
 }
