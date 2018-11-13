@@ -45,6 +45,6 @@ include ::hpacucli
 Developed and tested on Ubuntu 14.04 server. Pull requests are welcomed. 
 
 ## Release Notes/Contributors/Etc **Optional**
-
+ * 0.3.0 - Module is upgraded to use ssacli rather than hpacucli. Only tested on Ubuntu 16.04
  * 0.2.0 - Module is bugfixed, and tested on Ubuntu 14.04.
  * 0.1.0 - Initial commit. Nothing really works yet.

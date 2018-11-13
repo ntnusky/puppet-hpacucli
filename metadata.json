@@ -1,6 +1,6 @@
 {
   "name": "puppet-hpacucli",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "author": "ntnusky",
   "summary": "Installs the hpacucli repos and toolsets.",
   "license": "Public Domain",
@@ -20,7 +20,8 @@
       "operatingsystemrelease": [
         "10.04",
         "12.04",
-        "14.04"
+        "14.04",
+        "16.04"
       ]
     }
   ],

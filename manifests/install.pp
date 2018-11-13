@@ -16,9 +16,14 @@
 #
 
 class hpacucli::install {
-  $pkgs = [ 'hpacucli', 'hp-health']
+  $pkgs = [ 'ssacli']
   package { $pkgs:
     ensure  => 'present',
     require => Class['apt::update']
+  }
+
+  $removepkgs = [ 'hpacucli', 'hp-health' ]
+  package { $removepkgs:
+    ensure => 'absent',
   }
 }
