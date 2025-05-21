@@ -51,12 +51,12 @@ class hpacucli::repo (
   $key_fingerprint = '57446EFDE098E5C934B69C7DC208ADDE26C2B797',
 ) {
   apt::source { 'hpmcp':
-    location    => $repository_url,
-    repos       => $repositories,
-    release     => $release,
-    key         => $key_fingerprint,
-    key_source  => $key_source,
-    key_server  => undef,
-    include_src => false,
+    location => $repository_url,
+    repos    => $repositories,
+    release  => $release,
+    key      => {
+      id     => $key_fingerprint,
+      source => $key_source,
+    },
   }
 }
