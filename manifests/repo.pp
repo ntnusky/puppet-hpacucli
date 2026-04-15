@@ -16,7 +16,7 @@
 #
 # [*release*]
 #   Which release to install.
-#   Defaults to "${::lsbdistcodename}/current"
+#   Defaults to "${::facts['os']['distro']['codename']}/current"
 #
 # [*key_source*]
 #   Link to the location of the key
@@ -30,7 +30,7 @@
 #
 #  class { 'hpacucli::repo':
 #    repository_url  => "http://downloads.linux.hpe.com/SDR/repo/mcp"
-#    repositories    => "${::lsbdistcodename}/current"
+#    repositories    => "${::facts['os']['distro']['codename']}/current"
 #    key_source      => "http://downloads.linux.hpe.com/SDR/hpePublicKey2048_key1.pub"
 #    key_fingerprint => "57446EFDE098E5C934B69C7DC208ADDE26C2B797"
 #  }
@@ -46,7 +46,7 @@
 class hpacucli::repo (
   $repository_url  = 'https://downloads.linux.hpe.com/SDR/repo/mcp/ubuntu',
   $repositories    = 'non-free',
-  $release         = "${::lsbdistcodename}/current",
+  $release         = "${::facts['os']['distro']['codename']}/current",
   $key_source      = 'https://downloads.linux.hpe.com/SDR/hpePublicKey2048_key2.pub',
   $key_fingerprint = '9E8C4A25C49408EFA8D09D96E3FE26E774C3A4A2',
 ) {
